@@ -41676,6 +41676,7 @@ module.exports = Ractive.extend({
     x.domain([new Date(first.date), new Date(last.date)]);
     y.domain([0, first.points]).nice();
     svg = d3.select(this.el.querySelector('#chart')).append("svg").attr("width", width + margin.left + margin.right).attr("height", height + margin.top + margin.bottom).append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    svg.append("defs").append("svg:clipPath").attr("id", "clip").append("svg:rect").attr("id", "clip-rect").attr("x", 0).attr("y", 0).attr("width", width).attr("height", height);
     svg.append("g").attr("class", "x axis day").attr("transform", "translate(0," + height + ")").call(xAxis);
     m = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     mAxis = xAxis.orient("top").tickSize(height).tickFormat(function(d) {

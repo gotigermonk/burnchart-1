@@ -665,24 +665,29 @@ ul li {
 #title {
   border-bottom: 3px solid #f3f4f8;
   white-space: nowrap;
-  line-height: 52px;
+  line-height: 30px;
   margin-top: 20px;
 }
-#title .title {
-  float: left;
+#title .wrap {
+  white-space: normal;
   border-bottom: 3px solid #aaafbf;
   margin-bottom: -3px;
+  padding-bottom: 10px;
+}
+#title .title {
+  display: inline-block;
+  line-height: 30px;
+  margin-right: 20px;
 }
 #title .sub {
-  float: left;
   font-size: 16px;
   font-weight: bold;
-  padding: 0 20px;
+  margin-right: 20px;
 }
 #title .description {
-  overflow: hidden;
   font-family: 'MuseoSlab500Regular', serif;
   color: #b1b6c4;
+  display: inline-block;
 }
 #title:after {
   display: block;
@@ -693,7 +698,7 @@ ul li {
   padding-bottom: 80px;
 }
 #page #content {
-  padding: 20px;
+  padding: 20px 0;
   margin-top: 20px;
   margin-bottom: 40px;
 }
