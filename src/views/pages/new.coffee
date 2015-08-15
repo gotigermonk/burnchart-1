@@ -14,7 +14,7 @@ module.exports = Eventful.extend
 
   'template': require '../../templates/pages/new.html'
 
-  'data': { 'value': 'radekstepan/disposable', user }
+  'data': { 'value': 'unfoldingWord-dev/ts-desktop', user }
 
   'components': { Icons }
 
