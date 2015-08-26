@@ -144,7 +144,6 @@ module.exports = new Model
 
   onconstruct: ->
     @subscribe '!projects/add',  @add, @
-    @subscribe '!projects/demo', @demo, @
 
   onrender: ->
     # Init the projects.
@@ -152,12 +151,13 @@ module.exports = new Model
 
     # Persist projects in local storage (sans milestones).
     @observe 'list', (projects) ->
-      lscache.set 'projects', _.pluckMany projects, [ 'owner', 'name' ]
+      lscache.set 'projects', []
+      # _.pluckMany projects, [ 'owner', 'name' ]
     , 'init': no
 
     # Reset our index and re-sort.
     @observe 'sortBy', ->
-      # Use pop as Ractive is glitchy when resetting arrays.
+      # Use pop as Ractive is glitchy when resetting arrays lscache.set 'projects', []
       @set 'index', null
       # Run the sort again.
       do @sort
