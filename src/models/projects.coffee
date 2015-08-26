@@ -114,15 +114,7 @@ module.exports = new Model
       throw 500  
 
   # TODO: remove in production.
-  demo: ->
-    @set 'list': [
-      { 'owner': 'mbostock', 'name': 'd3' }
-      { 'owner': 'medic', 'name': 'medic-webapp' }
-      { 'owner': 'ractivejs', 'name': 'ractive' }
-      { 'owner': 'radekstepan', 'name': 'disposable' }
-      { 'owner': 'rails', 'name': 'rails' }
-      { 'owner': 'rails', 'name': 'spring' }
-    ], 'index': []
+  
 
   clear: ->
     @set 'list': [], 'index': []
